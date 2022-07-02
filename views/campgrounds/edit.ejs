@@ -1,0 +1,106 @@
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class="text-center">Edit Campground</h1>
+  <div class="col-md-6 offset-md-3">
+    <form
+      class="needs-validation"
+      action="/campgrounds/<%=curr.id%>?_method=PUT"
+      method="POST"
+      enctype="multipart/form-data"
+      novalidate
+    >
+      <div>
+        <label class="form-label mb-3" for="title">Title: </label>
+        <input
+          class="form-control"
+          type="text"
+          id="title"
+          name="campground[title]"
+          value="<%=curr.title%>"
+          placeholder="Campground title"
+          required
+        />
+        <div class="valid-feedback mb-3">Looks good!</div>
+        <label class="form-label mb-3" for="location">Location: </label>
+        <input
+          class="form-control"
+          type="text"
+          id="location"
+          name="campground[location]"
+          value="<%=curr.location%>"
+          placeholder="Campground location"
+          required
+        />
+        <div class="valid-feedback mb-3">Looks good!</div>
+        <!-- <input
+          class="form-control"
+          type="text"
+          id="image"
+          name="campground[image]"
+          value=""
+          placeholder="Campground image url"
+          required
+        /> -->
+        <div class="valid-feedback mb-3">Looks good!</div>
+        <label class="form-label mb-3" for="price">Price: </label>
+        <div class="input-group mb-3" id="price">
+          <div class="input-group-append">
+            <span class="input-group-text">$</span>
+          </div>
+          <input
+            type="text"
+            name="campground[price]"
+            value="<%=curr.price%>"
+            class="form-control"
+            placeholder="0.00"
+            aria-label="Dollar amount (with dot and two decimal places)"
+            required
+          />
+        </div>
+        <label class="form-label mb-3" for="image">Description: </label>
+        <textarea
+          class="form-control mb-3"
+          type="text"
+          id="description"
+          name="campground[description]"
+          value="<%=curr.description%>"
+          placeholder="Campground Description"
+          required
+        >
+<%=curr.description%></textarea
+        >
+        <div class="valid-feedback mb-3">Looks good!</div>
+        <div class="mb-3">
+          <label for="formFileMultiple" class="form-label"
+            >Add more Images:
+          </label>
+          <input
+            class="form-control"
+            type="file"
+            id="formFileMultiple"
+            name="image"
+            multiple
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <%curr.images.forEach(function(img , i){%>
+        <div>
+          <img src="<%=img.thumbnail%>" alt="" class="img-thumbnail" />
+          <div class="form-check-inline">
+            <input
+              type="checkbox"
+              name="deleteImages[]"
+              id="image-<%=i%>"
+              value="<%=img.filename%>"
+            />
+            <label for="image-<%=i%>">Delete?</label>
+          </div>
+        </div>
+        <%})%>
+      </div>
+      <button class="btn btn-success mb-3">Submit</button>
+    </form>
+    <a href="/campgrounds/<%=curr.id%>">Back to Campground</a>
+  </div>
+</div>

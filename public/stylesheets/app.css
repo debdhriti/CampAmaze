@@ -1,0 +1,19 @@
+#cluster-map{
+    width: 100%;
+    height: 500px;
+}
+
+#map{
+    width : 100%;
+    height: 300px;
+}
+
+/* .fix-size{
+    height: 500px;
+    width: 100%;
+    text-align: center;
+} */
+
+.fix-size img{
+object-fit:contain;
+}
