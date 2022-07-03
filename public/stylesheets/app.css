@@ -8,11 +8,9 @@
     height: 300px;
 }
 
-/* .fix-size{
-    height: 500px;
-    width: 100%;
-    text-align: center;
-} */
+.para{
+    font-size: 15px;
+}
 
 .fix-size img{
 object-fit:contain;
