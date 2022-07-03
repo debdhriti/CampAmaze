@@ -13,9 +13,17 @@ object-fit:contain;
 }
 
 .dot {
-  height: 15px;
-  width: 15px;
+  height: 13.5px;
+  width: 13.5px;
   background-color: #ee465f;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-cluster {
+  height: 21px;
+  width: 21px;
+  background-color: #e1a692;
   border-radius: 50%;
   display: inline-block;
 }

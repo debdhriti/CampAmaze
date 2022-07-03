@@ -38,7 +38,7 @@ map.on("load", () => {
         "step",
         ["get", "point_count"],
         "#e1a692",
-        2,
+        40,
         "#de6e56",
         750,
         "#e2e2e2",
