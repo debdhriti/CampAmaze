@@ -4,7 +4,7 @@
 mapboxgl.accessToken = mapToken;
 const map = new mapboxgl.Map({
   container: "cluster-map",
-  style: "mapbox://styles/mapbox/streets-v11",
+  style: "mapbox://styles/mapbox/streets-v10",
   center: [77.1025, 28.7041],
   zoom: 3,
 });
@@ -38,7 +38,7 @@ map.on("load", () => {
         "step",
         ["get", "point_count"],
         "#e1a692",
-        100,
+        2,
         "#de6e56",
         750,
         "#e2e2e2",
@@ -65,7 +65,7 @@ map.on("load", () => {
     source: "passedCampgrounds",
     filter: ["!", ["has", "point_count"]],
     paint: {
-      "circle-color": "#63bff0",
+      "circle-color": "#ee465f",
       "circle-radius": 5.5,
       "circle-stroke-width": 1,
       "circle-stroke-color": "#fff",

@@ -8,10 +8,27 @@
     height: 300px;
 }
 
-.para{
-    font-size: 15px;
-}
-
 .fix-size img{
 object-fit:contain;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #ee465f;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* media queries */
+@include media-breakpoint-up(sm) {
+    .para{
+       width: 150%;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    html {
+        width: 125%;
+    }
 }
