@@ -65,7 +65,7 @@
     </div>
   </div>
   <div class="col-md-6">
-    <div id="map"></div>
+    <div id="map" class="mb-3"></div>
 
     <% if(currentUser){ %>
     <h2>Leave a Review</h2>
@@ -100,7 +100,7 @@
         <input type="radio" id="first-rate5" name="review[rating]" value="5" />
         <label for="first-rate5" title="Amazing">5 stars</label>
       </fieldset>
-      <div class="mb-3">
+      <div class="mb-5">
         <label class="form-label" for="body">Review Text</label>
         <textarea
           class="form-control"
@@ -114,7 +114,9 @@
       </div>
       <button class="btn btn-success">Submit</button>
     </form>
-    <% } %> <% for(let review of campground.reviews) { %>
+    <% } %>
+    <h4>Other Reviews:</h4>
+    <% for(let review of campground.reviews) { %>
     <div class="card mb-3">
       <div class="card-body">
         <h5 class="card-title"><%= review.author.username%></h5>
