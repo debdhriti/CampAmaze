@@ -27,7 +27,6 @@ module.exports.register = async (req, res) => {
 let redirectUrl;
 
 module.exports.renderLogin = (req, res) => {
-  //   console.log("RDURLLLLLL: ", req.session.returnTo);
   redirectUrl = req.session.returnTo;
   res.render("users/login");
 };
@@ -35,9 +34,8 @@ module.exports.renderLogin = (req, res) => {
 module.exports.login = (req, res) => {
   req.flash(
     "success",
-    `Hello, ${req.body.username}! Welcome back to Yelp Camp!`
+    `Hello, ${req.body.username}! Welcome back to CampAmaze!`
   );
-  // console.log("RDURLLLLLLLLLLLLLLL: ", redirectUrl);
   delete req.session.returnTo;
   if (!redirectUrl) {
     return res.redirect("/campgrounds");

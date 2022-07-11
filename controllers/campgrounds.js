@@ -1,7 +1,6 @@
 const Campground = require("../models/campground");
 const { cloudinary } = require("../cloudinary");
 const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
-const ExpressError = require("../utils/ExpressError");
 const mapBoxToken = process.env.MAPBOX_TOKEN;
 const geocoder = mbxGeocoding({ accessToken: mapBoxToken });
 
@@ -29,7 +28,6 @@ module.exports.createCampground = async (req, res, next) => {
   try {
     newObj.geometry = geoData.body.features[0].geometry; //adding in the geoJSON
   } catch (e) {
-    throw new ExpressError(500, e.message);
     next(e);
   }
   newObj.images = req.files.map((f) => ({

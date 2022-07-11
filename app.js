@@ -23,7 +23,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const MongoDBStore = require("connect-mongo");
 //imports end
 
-//db url for atlas
+//db url for mongo atlas
 const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/yelp-camp";
 //"mongodb://localhost:27017/yelp-camp"
 //connect with mongoose
@@ -47,10 +47,10 @@ app.set("view engine", "ejs");
 //for parsing application forms
 app.use(express.urlencoded({ extended: true }));
 
-//for allowing method-override so that PATCH and DELETE work
+//for allowing method-override so that PATCH and DELETE requests can be made
 app.use(methodOverride("_method"));
 
-//add the folder under which css and js are present
+//add the folder under which css and js files are present
 app.use(express.static(path.join(__dirname, "/public")));
 
 //environment variable
@@ -118,12 +118,6 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 //template header ends
-
-// app.get("/fakeUser", async (req, res) => {
-//   const user = new User({ email: "something@gmail.com", username: "LELOLULU" });
-//   const newUser = await User.register(user, "chicken"); //registers the new user
-//   res.send(newUser);
-// });
 
 //template footer from here
 app.all("*", (req, res, next) => {

@@ -1,15 +1,15 @@
-#cluster-map{
-    width: 100%;
-    height: 500px;
+#cluster-map {
+  width: 100%;
+  height: 500px;
 }
 
-#map{
-    width : 100%;
-    height: 300px;
+#map {
+  width: 100%;
+  height: 300px;
 }
 
-.fix-size img{
-object-fit:contain;
+.fix-size img {
+  object-fit: contain;
 }
 
 .dot {
@@ -28,15 +28,20 @@ object-fit:contain;
   display: inline-block;
 }
 
+.very-small {
+  font-size: 15px;
+  margin-left: 600px;
+}
+
 /* media queries */
 @include media-breakpoint-up(sm) {
-    .para{
-       width: 150%;
-    }
+  .para {
+    width: 150%;
+  }
 }
 
 @include media-breakpoint-up(md) {
-    html {
-        width: 125%;
-    }
+  html {
+    width: 125%;
+  }
 }
