@@ -22,4 +22,4 @@ API_SECRET='<secret>'
 ```
 Run ```mongod``` in another terminal and ```node app.js``` in the terminal with the project.
 
-Then go to [localhost:3000](/localhost:3000/).
+Then go to [localhost:3000](localhost:3000/).
