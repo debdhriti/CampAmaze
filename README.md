@@ -2,7 +2,7 @@
 ![image](https://user-images.githubusercontent.com/77495660/178193629-00414c12-bf75-46f8-a41a-b6d600ee9565.png)
 ![image](https://user-images.githubusercontent.com/77495660/178193642-fee69497-1b57-4b30-b95d-c3a06c7971cf.png)
 CampAmaze is a website where users can create and review campgrounds. In order to review or create a campground, you must have an account.
-This project was created using Node.js, Express, MongoDB, and Bootstrap. Passport.js was used to handle authentication.
+This project was created using **Node.js**, **Express**, **MongoDB**, and **Bootstrap**. **Passport.js** was used to handle authentication.
 
 ## **Features**
 - Users can create, edit, and remove campgrounds
