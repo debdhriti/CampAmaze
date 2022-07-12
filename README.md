@@ -1,6 +1,6 @@
 # CampAmaze
 - #### Homepage
-![image](https://user-images.githubusercontent.com/77495660/178386536-81f01ac6-b1bf-4679-b8de-2fef0e06d241.png)
+![image](https://user-images.githubusercontent.com/77495660/178386627-f4fbd2cc-46ca-4324-9a62-553e88c1b1df.png)
 - #### All Campgrounds
 ![image](https://user-images.githubusercontent.com/77495660/178193629-00414c12-bf75-46f8-a41a-b6d600ee9565.png)
 - #### Redirected to Login
