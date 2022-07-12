@@ -13,7 +13,7 @@
 ![image](https://user-images.githubusercontent.com/77495660/178386391-802874f1-77fe-484f-97ba-c23f49d9d021.png)
 
 
-CampAmaze is a website where users can create and review campgrounds. In order to review or create a campground, you must have an account.
+CampAmaze is a website where users can create, update, delete and review campgrounds. In order to review or create a campground, you must have an account.
 This project was created using **Node.js**, **Express**, **MongoDB**, and **Bootstrap**. **Passport.js** was used to handle authentication.
 
 ## **Features**
