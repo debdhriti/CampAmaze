@@ -128,7 +128,6 @@ app.all("*", (req, res, next) => {
 app.use((err, req, res, next) => {
   const { status = 500, message = "Default error message", stack } = err;
   res.status(status).render("error", { status, message, stack });
-  //   res.send("AINTYA FAMAKKED?!!");
 });
 
 //environment variable port
